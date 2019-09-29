@@ -15,7 +15,6 @@ int main(int argc, char *argv[])
 
     TimeSchedule t = TimeSchedule(s);
     t.SetTimeCallback( &custom_time_callback );
-    printf("t.get_time(): %d\n", t.get_time());
     printf("1: %d\n", t.Check());
 
     bool check;
