@@ -36,6 +36,12 @@ TimeSchedule::TimeSchedule( ScheduledTime st )
     this->update_times();
 }
 
+TimeSchedule::TimeSchedule()
+{
+    this->_time_callback = &default_time_callback;
+}
+
+
 void TimeSchedule::SetSchedule( ScheduledTime st )
 {
     this->_scheduled_time = st;

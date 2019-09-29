@@ -13,7 +13,8 @@ int main(int argc, char *argv[])
 {
     ScheduledTime s = { 23, 59, 0, S_DURATION(0, 2, 0) };
 
-    TimeSchedule t = TimeSchedule(s);
+    TimeSchedule t = TimeSchedule();
+    t.SetSchedule(s);
     t.SetTimeCallback( &custom_time_callback );
     printf("1: %d\n", t.Check());
 

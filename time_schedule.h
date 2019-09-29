@@ -26,11 +26,11 @@ time_t default_time_callback();
 class TimeSchedule {
 
     public:
+        TimeSchedule();
         TimeSchedule( ScheduledTime );
         void SetSchedule( ScheduledTime );
         bool Check(); // return true if schedule criteria is met.
         void SetTimeCallback( f_time_t );
-
 
     private:
         ScheduledTime _scheduled_time;
