@@ -1,6 +1,14 @@
+/*
+    time_schedule.cpp
+    Version: 0.01
+*/
+
+
 #include "time_schedule.h"
 
-#include <stdio.h>
+#ifdef __DEBUG__
+    #include <stdio.h>
+#endif//__DEBUG__
 
 time_t default_time_callback()
 { 

@@ -1,12 +1,18 @@
+/*
+    time_schedule.h
+    Version: 0.01
+*/
+
 #ifndef TIME_SCHEDULE_H
 #define TIME_SCHEDULE_H
 
 #include <stdint.h>
 #include <time.h>
 
+#define TIME_SCHEDULE_VERSION 0.01
+
 #define S_DURATION(h,m,s) (3600*h+60*m+s)
 
-//#define __DEBUG__
 
 typedef struct ScheduledTime {
     uint8_t hour, min, sec;
