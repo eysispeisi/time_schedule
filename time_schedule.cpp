@@ -96,3 +96,10 @@ void TimeSchedule::update_times()
     this->_end_time = this->_start_time + this->_scheduled_time.duration;
 }
 
+
+bool isValid_time(ScheduledTime t) {
+  return  ( 0 <= t.hour && t.hour <= 23 &&
+            0 <= t.min && t.min <= 59 &&
+            0 <= t.sec && t.sec <= 59 &&
+            t.duration > 0 );
+}

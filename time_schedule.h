@@ -13,7 +13,6 @@
 
 #define S_DURATION(h,m,s) (3600*h+60*m+s)
 
-
 typedef struct ScheduledTime {
     uint8_t hour, min, sec;
     uint32_t duration;
@@ -30,6 +29,8 @@ enum CB_TYPES {
     CB_GET_TIME = 0x04
     };
 
+bool isValid_time(ScheduledTime);
+
 class TimeSchedule {
 
     public:
@@ -39,9 +40,6 @@ class TimeSchedule {
         void SetSchedule( ScheduledTime );
         bool Check(); // return true if schedule criteria is met.
         void SetCallback( int, f_time_t );
-        // on_start callback
-        // on_end callback
-        
 
     private:
         bool _is_active;
