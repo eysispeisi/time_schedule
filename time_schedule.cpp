@@ -62,7 +62,7 @@ time_t TimeSchedule::get_time()
 }
 
 
-void TimeSchedule::SetCallback( int cb_type, f_time_t callback )
+void TimeSchedule::SetCallback( CB_TYPES cb_type, f_time_t callback )
 {
     switch ( cb_type ) {
         

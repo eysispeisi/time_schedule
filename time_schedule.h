@@ -39,7 +39,7 @@ class TimeSchedule {
 
         void SetSchedule( ScheduledTime );
         bool Check(); // return true if schedule criteria is met.
-        void SetCallback( int, f_time_t );
+        void SetCallback( CB_TYPES, f_time_t );
 
     private:
         bool _is_active;
