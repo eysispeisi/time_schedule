@@ -40,7 +40,7 @@ CB_FUNC on_end() {
 
 int main(int argc, char *argv[])
 {
-    ScheduledTime s = { 23, 59, 0, S_DURATION(0, 2, 0) };
+    ScheduledTime s = { 23, 59, 0, S_DURATION(12, 0, 0) };
 
     TimeSchedule t = TimeSchedule();
     t.SetSchedule(s);

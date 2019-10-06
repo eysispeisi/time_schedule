@@ -11,7 +11,7 @@
 
 #define TIME_SCHEDULE_VERSION 0.02
 
-#define S_DURATION(h,m,s) (3600*h+60*m+s)
+#define S_DURATION(h,m,s) ( (uint32_t)( 3600*(uint32_t)h + 60*(uint16_t)m + s ) )
 
 typedef struct ScheduledTime {
     uint8_t hour, min, sec;
