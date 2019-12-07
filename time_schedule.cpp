@@ -10,7 +10,7 @@ time_t default_time_callback()
     return time(NULL); 
 }
 
-TimeSchedule::TimeSchedule( ScheduledTime st )
+TimeSchedule::TimeSchedule( time_duration st )
 {
     this->_scheduled_time = st;
     this->_time_callback = &default_time_callback;
@@ -26,7 +26,7 @@ TimeSchedule::TimeSchedule()
     this->_time_callback = &default_time_callback;
 }
 
-void TimeSchedule::SetSchedule( ScheduledTime st )
+void TimeSchedule::SetSchedule( time_duration st )
 {
     this->_scheduled_time = st;
     this->update_times();
@@ -97,7 +97,7 @@ void TimeSchedule::update_times()
 }
 
 
-bool isValid_time(ScheduledTime t) {
+bool isValid_time(time_duration t) {
   return  ( 0 <= t.hour && t.hour <= 23 &&
             0 <= t.min && t.min <= 59 &&
             0 <= t.sec && t.sec <= 59 &&
